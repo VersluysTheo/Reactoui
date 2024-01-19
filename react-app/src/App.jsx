@@ -4,7 +4,7 @@ import AdminModif from './components/Button/AdminButton'
 import Login from './components/Login/Login'
 import AddButton from './components/Button/AddButton'
 import Listbox from './components/Listbox/Listbox'
-
+import CardsMui from './components/Cards/Cards'
 
 export default function App() {
 
@@ -24,6 +24,9 @@ export default function App() {
         </div>
         <div className='container'>
         <Listbox/>
+        </div>
+        <div className="container">
+        <CardsMui/>
         </div>
     </>
   )
