@@ -1,27 +1,11 @@
 import styles from './Listbox.module.css'
 
 
+
+
 export default function Listbox(){
-
-    return(
-        <div className={styles.listbox}>
-            <select className={styles.selectlist} name="style-select" id="style-select">
-                <option value="">Choississez un style :</option>
-            </select>
-        </div>
-    )
-}
-
-
-
-
-
-
-
-
-
+    
 // avec un tableau
-
 
 // const styleslist = [
 //     { name: 'rock' },
@@ -43,3 +27,12 @@ export default function Listbox(){
 //     const select = document.querySelector('select');
 //     select.appendChild(optionValue);
 //   })
+
+    return(
+        <div className={styles.listbox}>
+            <select className={styles.selectlist} name="style-select" id="style-select">
+                <option value="">Choississez un style :</option>
+            </select>
+        </div>
+    )
+}
