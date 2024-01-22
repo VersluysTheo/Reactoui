@@ -1,12 +1,15 @@
 import './App.css'
 // import LeButton from './components/Button/Button'
 // import AdminModif from './components/Button/AdminButton'
-// import Login from './components/Login/Login'
+import Login from './components/Login/Login'
 // import AddButton from './components/Button/AddButton'
-import Listbox from './components/Listbox/Listbox'
-import CardsMui from './components/Cards/Cards'
+// import Listbox from './components/Listbox/Listbox'
+// import CardsMui from './components/Cards/Cards'
+// import { useState } from 'react'
 
 export default function App() {
+
+  // const [style, setStyle] = useState("");
 
   return (
     <>
@@ -19,15 +22,17 @@ export default function App() {
         {/* <div className='container'>
           <AddButton/>
         </div> */}
-        {/* <div className='container'>
-          <Login/>
-        </div> */}
         <div className='container'>
-        <Listbox/>
+          <Login/>
         </div>
-        <div className="container">
-        <CardsMui/>
-        </div>
+        {/* <div className='container'> */}
+          {/* Permet le changement d'etat des styles de musiques */}
+        {/* <Listbox setStyle={setStyle}/>
+        </div> */}
+        {/* <div className="container"> */}
+          {/* contient la donnée du style de music permettant de le changer plus tard avec setStyle */}
+        {/* <CardsMui musicstyle={style}/>
+        </div> */}
     </>
   )
 }
