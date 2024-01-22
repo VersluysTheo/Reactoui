@@ -2,28 +2,22 @@ import styles from './Listbox.module.css'
 
 
 export default function Listbox(){
-
-    // let select = document.getElementsByClassName(styles.selectlist);
-    // console.log(select.style-select.value);
-    // select.addEventListener('change', function () {
-        // let selectedStyle = select.value;
-        // filtrerStyle(selectedStyle);
-    //   });
-
-    // function filtrerStyle() {
-    //     let selectedStyle = document.getElementById('.style-select').value;
+    // let selectedStyle = e.target.value;
     //     let cards = document.getElementsByClassName(styles.card);
       
     //     cards.forEach((card) => {
     //       let stylesElement = card.querySelector('.styles');
       
     //       if (stylesElement) {
-    //         let lestyle = stylesElement.textContent.split(',');
+    //         let lestyle = e.target.value.split(',');
     //         let shouldDisplay = selectedStyle === '' || lestyle.some(style => selectedStyle.includes(style));
     //         card.style.display = shouldDisplay ? 'block' : 'none';
     //       }
     //     })
-    //   }
+
+    function filtrerStyle(e) {
+        console.log(e.target.value);
+      }
 
     let styleslist = [
         { name: 'rock' },
@@ -41,7 +35,7 @@ export default function Listbox(){
     
     return(
         <div className={styles.listbox}>
-            <select className={styles.selectlist} name="style-select" id="style-select">
+            <select onChange={filtrerStyle} className={styles.selectlist} name="style-select" id="style-select">
                 <option value="">Choississez un style :</option>
                 {styleslist.map(style => {
                     return(
