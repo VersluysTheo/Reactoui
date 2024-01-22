@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 // import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
 export default function ImgMediaCard() {
 
@@ -18,7 +19,6 @@ export default function ImgMediaCard() {
             return response.json()
         })
         .then( data => {
-            console.log(data)
                 setItems(data)
             })
     },[]);
@@ -28,6 +28,7 @@ export default function ImgMediaCard() {
         {items.map(item => (
         <div className={styles.card} key={item.id}>
     <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
       {/* <CardMedia
         component="img"
         alt="ajajajajajajajajajajajajajajajajaaj"
@@ -46,9 +47,10 @@ export default function ImgMediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">a voir pour les boutons</Button>
-        <Button size="small">Pareil</Button>
+        <Button size="small">31</Button>
+        <Button size="small">32</Button>
       </CardActions>
+      </CardActionArea>
     </Card>
             </div>
         ))}
