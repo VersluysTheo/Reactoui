@@ -1,22 +1,21 @@
 import styles from './Listbox.module.css'
+// Pas besoin d'installer de dépendances pour importer PropTypes
+import PropTypes from 'prop-types';
 
+// Declaration du type de sortie de props 
+Listbox.propTypes = {
+    // pour savoir quoi mettre a gauche et a droite :
+    // a gauche c'est le nom donnée dans ton composant parent
+    // a droite c'est le type du props et ça depend de ta sortie
+    setStyle: PropTypes.func
+  };
 
-export default function Listbox(){
-    // let selectedStyle = e.target.value;
-    //     let cards = document.getElementsByClassName(styles.card);
-      
-    //     cards.forEach((card) => {
-    //       let stylesElement = card.querySelector('.styles');
-      
-    //       if (stylesElement) {
-    //         let lestyle = e.target.value.split(',');
-    //         let shouldDisplay = selectedStyle === '' || lestyle.some(style => selectedStyle.includes(style));
-    //         card.style.display = shouldDisplay ? 'block' : 'none';
-    //       }
-    //     })
+export default function Listbox({setStyle}){
+
 
     function filtrerStyle(e) {
-        console.log(e.target.value);
+        // e.target.value  = les valeurs de la listbox ( donc la liste des styles de musique présents )
+        setStyle(e.target.value);
       }
 
     let styleslist = [
