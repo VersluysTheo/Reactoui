@@ -51,3 +51,7 @@ input.submit{
     width: 20%;
     background-color: #EDF2F4;
 }
+
+input.submit:hover{
+    background-color: #c6cfd3;
+}
