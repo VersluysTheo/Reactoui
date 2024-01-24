@@ -1,5 +1,5 @@
 import './App.css'
-import FormAdd from './components/Form/FormAdd'
+// import FormAdd from './components/Form/FormAdd'
 // import LeButton from './components/Button/Button'
 // import AdminModif from './components/Button/AdminButton'
 import Login from './components/Login/Login'
@@ -34,9 +34,9 @@ export default function App() {
           {/* contient la donnée du style de music permettant de le changer plus tard avec setStyle */}
         {/* <CardsMui musicstyle={style}/>
         </div> */}
-        <div className='container'>
+        {/* <div className='container'>
           <FormAdd/>
-        </div>
+        </div> */}
     </>
   )
 }
